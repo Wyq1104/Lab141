@@ -61,11 +61,12 @@ void populateUsers(void* users) {
     strcpy(u->password, password);  
     u->admin=nAdmin;
 
-    printf("%s\n", u->firstname); 
+    // printf("%s\n", u->firstname); 
     // printf("%s\n", lastname);
     // printf("%s\n", username);
     // printf("%s\n", password);
-    printf("%d\n", u->admin);
+    // printf("%d\n", u->admin);
+    index++;
   }
   fclose(fp);
 }
