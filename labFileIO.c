@@ -45,8 +45,10 @@ void populateUsers(void* users) {
   }
   char line[sizeof(struct user)];
   int index=0;
+  struct user* newUsers=(struct user*)users;
+  struct user* u;
   while(fgets(line, sizeof(line), fp)){
-    struct user* u=users+index;
+	  u=newUsers+index;
     char delim [2] = "\t";
     char* firstname=strtok(line, delim);
     char* lastname=strtok(NULL, delim);
