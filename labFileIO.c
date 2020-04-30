@@ -19,7 +19,7 @@ char* cs521Hash(const char* password) {
 struct user* createUsers(int* count) {
     int lines=0;
     FILE* fp; 
-    fp=fopen("credential_file", "r");
+    fp=fopen("credential_file.dms", "r");
     if (fp == NULL) {
         printf("Error in opening file.\n");
         return NULL;
@@ -38,7 +38,7 @@ struct user* createUsers(int* count) {
 
 void populateUsers(void* users) {
   FILE* fp;
-  fp=fopen("credential_file", "r");
+  fp=fopen("credential_file.dms", "r");
   if (fp == NULL) {
     printf("Error in opening file.\n");
     return;
@@ -100,7 +100,7 @@ struct user* addUser(struct user* users, int* count, char* username, char* passw
 void saveUsers(struct user* users, int count) {
   FILE* fp; //declaring file pointer
   //Opening the file in write mode
-    fp = fopen("credential_file", "w");
+    fp = fopen("credential_file.dms", "w");
 
     if (fp == NULL) {
         printf("Error in opening file.\n");
